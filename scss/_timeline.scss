@@ -1,0 +1,147 @@
+
+
+#timeline {
+   .timeline-b {
+
+      
+      box-sizing: border-box;
+
+      ul {
+        
+         padding: 50px 0;
+      
+
+      // creating a line 
+         li {
+            position: relative;
+            width: 6px;
+            margin: 0 auto;
+            padding-top: 20px;
+            background: $white-color;
+
+      // creating boxes 
+
+            div {
+               position: relative;
+               width: 400px;
+               bottom: 0;
+               padding: 0.9rem;
+               background-color: rgba(44, 44, 44, 0.882);
+               color: #ffffff;
+               transition: all 0.5s ease-in;
+               visibility: hidden;
+               opacity: 0;
+               text-align: start;
+               box-shadow: 3px 3px 10px black;
+
+
+            
+               h3 {
+                  font-size: 1rem;
+                  margin-bottom: 10px;
+                  color: rgba(255, 173, 49, 0.904);
+                  
+               }
+
+               p {
+                  font-size: 0.9rem;
+                  
+                  
+               }
+
+            }
+
+         // create dots 
+
+            &:after {
+               position: absolute;
+               content: '';
+               bottom: 0;
+               left: 50%;
+               width: 25px;
+               height: 25px;
+               background: white;
+               border-radius: 50%;
+               transform:  translateX(-50%);
+               transition: 0.5s all ease-in-out;
+               transition-delay: 0.3s;
+   
+            }
+          
+            
+            &.show div {
+               visibility: visible;
+               opacity: 1;
+               transform:  none;
+            }
+            
+
+            
+         } 
+
+         li.show:after {
+            background: rgb(44, 44, 44);
+         }
+         
+         //arrow base
+   
+         div:before {
+            position: absolute;
+            bottom: 5px;
+            width: 0;
+            height: 0;
+            content: '';
+            border-style: solid;
+            
+         }    
+         //right boxes
+         
+         li:nth-child(odd) div{
+            transform: translate(200px, 0);
+            left: 40px;
+            transition: 0.6s ease-in-out;
+            
+            //creating arrows right
+            
+            &:before {
+               left: -15px;
+               border-width: 8px 16px 8px 0px;
+               border-color: transparent rgb(44, 44, 44) transparent transparent;
+            }   
+         }
+
+         // transition of boxes
+         li:nth-child(odd).show div {
+            transform:translateX(200px, 0);
+            left: -150px;
+            transition-delay: 0.3s;
+           
+         }
+         //left boxes
+         Li:nth-child(even) div{
+            left: -436px;
+            transform: translate(-200px, 0);
+            transition-delay: 0.3s;
+
+            // creating arrows left
+            &:before {
+               right: -15px;
+               border-width: 8px 0px 8px 16px;
+               border-color: transparent transparent  transparent rgb(44, 44, 44);
+            }
+         }
+
+         li:nth-child(even).show div {
+            transform: translateX(-200px, 0);
+            left: -250px;
+         }
+
+         
+      }  
+
+   }  
+}
+   
+   
+         
+   

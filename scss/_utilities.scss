@@ -1,0 +1,119 @@
+@import 'config';
+
+// utility classes
+
+
+
+
+.container {
+   max-width: 1280px;
+   margin:  0 auto;
+   overflow: hidden;
+   padding: 0 1.5rem;
+}
+
+
+
+
+.py {
+   &-1 {
+      padding: 1rem 0;
+   }
+   &-2 {
+      padding: 2rem 0;
+   }
+   &-3 {
+      padding: 3rem 0;
+   }
+   &-4 {
+      padding: 4rem 0;
+   }
+}
+
+.margin {
+   &-1 {
+      margin: 1rem 0;
+   }
+   &-2 {
+      margin: 2rem 0;
+   }
+   &-3 {
+      margin: 3rem 0;
+   }
+   &-4 {
+      margin: 4rem 0;
+   }
+}
+
+span {
+   color: #db952c;
+}
+
+
+.btn {
+   display: inline-block;
+   padding: 0.9rem;
+   border-radius: 8px;
+   width: 35%;
+   transition: all 0.5s;
+   background: rgba(255, 255, 255, 0.555);
+   color: $black-color;
+
+}
+
+.btn:hover {
+   
+   color: $gold-color;
+   background-color: rgba(51, 51, 51, 0.493);
+}
+
+.btn-line {
+   border-bottom: 1px solid transparent;
+   transition: all 1s;
+   
+}
+
+.btn-line:hover {
+   border-bottom:1px solid $white-color;
+}
+
+.current {
+  
+      border-bottom: 1px solid $gold-color;
+   
+}
+
+
+.text-center  {
+   text-align: center;
+}
+
+.line {
+   height: 3px;
+   background-color: $gold-color;
+   width: 90px;
+   display: block;
+   justify-content: center;
+   text-align: center;
+   align-self: center;
+   align-items: center;
+   margin: 0.1rem 1rem auto;
+}
+
+.section-title {
+   font-size: 1.5rem;
+   text-align: center;
+   display: block;
+   padding-bottom: 0.5rem;
+   text-transform: uppercase;
+   margin-top: 80px;
+}
+
+.bottom-line {
+   display: block;
+   height: 3px;
+   width: 5REM;
+   background-color: $gold-color; 
+    margin: 0 auto 1rem auto;
+
+}

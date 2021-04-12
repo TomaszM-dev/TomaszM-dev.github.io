@@ -1,0 +1,605 @@
+
+@import 'utilities';
+@import 'config';
+@import 'projects-grid';
+@import 'timeline';
+
+
+
+// font 
+
+@font-face {
+   font-family: 'monument_extendedregular';
+   src:  url('/scss/fonts/monument-webfont.woff') format('woff');
+}
+
+
+@font-face {
+   font-family: 'monument_extendedultrabold';
+   src: url('/scss/fonts/monumentbold-webfont.woff2') format('woff2');
+   font-weight: bold;
+}
+
+
+// General styles 
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   
+}
+
+body {
+   font-family: 'monument_extendedregular',sans-serif;
+   background: #f4f4f4;
+   line-height: 1.4;
+   overflow-x: hidden;
+   
+}
+
+a {
+   color: $white-color;
+   text-decoration: none;
+}
+
+
+
+
+
+ul {
+   list-style: none;
+}
+
+img {
+   width: 100%;
+}
+
+// home page
+
+#header {
+
+   
+   &-home:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(/img/Background-homepage.jpeg) no-repeat center center/cover;
+      z-index: -1;
+   
+   }
+   &-home {
+      background-color: $overlay-color;
+      height: 100vh;
+      position: relative;
+     
+    
+
+      // Navbar / main navigation
+
+      #navbar {
+         
+         width: 100%;
+         position: fixed;
+         top: 0;
+         opacity: 0.9;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         height: 70px;
+         padding: 0 3rem;
+         transition: 0.5s ;
+         background: #333;
+         color: #fff;
+         z-index: 10;
+         
+         &.top {
+            background: transparent;
+         }
+         .logo {
+              width: 100px;
+              height: 50px; 
+                           
+            }
+
+         ul {
+            display: flex;
+      
+            li {
+               a {
+                  padding: 0.3rem;
+                  margin: 14px;
+                  font-weight: bold;
+                  transition: all 0.5s;  
+               }
+            }
+         }         
+       }
+      
+      // header- content / center of the page 
+   
+      .header-content {
+         text-align: center;
+         padding-top: 17%;
+         
+
+         .content {
+            color: $white-color;
+            
+            h1 {
+               font-size: 2.5rem;
+               text-transform: uppercase;
+               margin-bottom: 30px;
+               
+            }
+
+            p {
+               margin-bottom: 30px;
+            }
+
+            .btn {
+               margin: 40px 0;
+               
+            } 
+
+            
+         }
+
+         .social {
+            i {
+               padding: 0 30px;
+               margin-bottom: 4rem;
+               transition: all 0.5s;
+               transform: scale(1);
+               
+            }
+
+            i:hover {
+               color: $gold-color;
+               transform: scale(1.3);          
+            }
+
+            a:hover {
+               padding: 1rem 0;
+               
+            }
+         }
+      }
+
+         
+      } 
+   }
+
+   //  my projects 
+
+#work {
+   &-a {
+      
+      background: $background-color;
+      
+      .bottom-line {
+         margin-bottom: 30px;
+      }
+      
+   }
+}
+
+
+// my lifetime story 
+
+#timeline {
+   
+
+   background: $overlay-color2;
+   color: white;
+   position: relative;
+  
+   
+
+   &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(/img/Background-other.jpeg) no-repeat center center/ cover;
+      content: '';
+      z-index: -1;
+
+   }
+  
+   .timeline-a {
+
+      h1 {
+        padding-top: 4%; 
+        font-size: 2rem;
+
+        span {
+           color: $gold-color;
+        }
+         
+      }
+
+      i {
+         position: relative;
+         text-align: center;
+         margin: 5px auto;
+         left: 8px;
+         display: block;
+         
+      }
+   }
+}
+
+// my web dev skills
+
+#about {
+
+   color: black;
+   padding-top: 1%;
+   .skills {
+   
+    display: flex;
+    flex-direction: column;
+    
+      .skill {
+         padding: 1rem;
+         
+         div {
+            height: 30px;
+            background-color: black;
+            border-radius: 10px;
+            margin-top: 5px;
+            
+
+            .one {
+               height: 30px;
+               background-color: $gold-color;
+               border-radius:  10px  2px 2px 10px;
+               margin-top: 5px;
+               width: 80%;
+               border: 2px black solid;
+            }
+            .two {
+               height: 30px;
+               background-color: $gold-color;
+               border-radius:  10px  2px 2px 10px;
+               margin-top: 5px;
+               width: 43%;
+               border: 2px black solid;
+            }
+            .three {
+               height: 30px;
+               background-color: $gold-color;
+               border-radius:  10px  2px 2px 10px;
+               margin-top: 5px;
+               width: 24%;
+               border: 2px black solid;
+            }
+            .four {
+               height: 30px;
+               background-color: $gold-color;
+               border-radius:  10px  2px 2px 10px;
+               margin-top: 5px;
+               width: 1%;
+               border: 2px black solid;
+            }
+         }
+      }
+   }
+
+}   
+
+//  my interpersonal skills
+   .about-a {
+      
+      margin: 120px;
+
+      .section-title {
+         font-size: 1.7rem;
+      }
+
+      .bottom-line {
+         margin-bottom: 60px;
+      }
+      .check-list {
+         margin: 0;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 0.4rem;
+         
+       
+        li {
+         position: relative;
+         list-style-type: none;
+         padding-left: 2.5rem;
+         margin-bottom: 0.5rem;
+         display: inline-block;
+         font-size: 1.1rem;
+         justify-self: center;
+         transition: all 0.4s;
+         transform: scale(1);
+         
+         
+       }
+      
+      }
+
+      li:hover {
+         transform: scale(1.2);
+      }
+       
+       li:before {
+           content: '';
+           display: block;
+           position: absolute;
+           left: 0;
+           top: -2px;
+           width: 5px;
+           height: 16px;
+           border-width: 0 3px 3px 0;
+           border-style: solid;
+           border-color: $gold-color;
+           transform-origin: bottom left;
+           transform: rotate(45deg);
+           justify-self: center;
+           
+       }
+   }
+
+
+   // few last words about me 
+
+   #contact {
+
+      padding-top: 2%;
+
+      .content {
+         display: flex;
+         position: relative;
+         margin-top: 50px;
+         text-align: center;
+         align-items: center;
+         align-self: center;
+         justify-content: center;
+
+         .img {
+            border: 1px solid black;
+	         height: 455px;
+	         width: 390px;
+	         margin: 10px;
+            margin-right: 2rem;
+	         border-radius: 5px  10px 5px 150px;
+	         background: url(/img/me.jpg) no-repeat center  center/ cover;
+	         box-shadow: 2px 3px 10px black;
+           
+           
+         }
+         
+         .ul {
+            ul {
+               font-size:1.2rem;
+               // padding: 1rem;
+               width: 100%;
+               
+              
+               li {
+                  text-align: start;
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 1rem;
+                  background-color: #d3d0d04d;
+                  margin: 0.7rem 0;
+                  border-radius: 8px 8px 8px 8px;
+                  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.158);
+                  transition: all 0.5s ;
+                  font-size: 1rem;
+                  font-weight: bold;
+                  // font-family: 'monument_extendedultrabold';
+   
+                  a {
+                     color: $gold-color;
+                     font-family: 'monument_extendedregular';
+                  }
+                  
+                  i {
+                     font-size: 1.5rem;
+                  }
+                  span {
+                     color: rgb(65, 65, 65);
+                     text-align: start;
+                     display: inline-block;
+                     font-family: 'monument_extendedregular';
+                     
+                  }
+
+               
+               }
+             
+         }
+            li:hover {
+               background-color: #afaeaea2;
+
+            }
+         }  
+      }
+     
+   }
+
+   // footer
+
+   #footer {
+      margin-top: 150px;
+      a{ 
+         color: #333;
+      }
+      
+      .logo {
+         display: grid;
+         grid-template-areas:
+         'div1 div1 img div2 div2';
+
+         img {
+            width: 80px;
+            grid-area: img;
+         }
+         
+         a {
+            
+            justify-self: center;
+            text-align: center;
+            display: block;
+         }
+         .div1 {
+            grid-area: div1;
+           
+            height: 2px;
+            margin: 3.5rem 0;
+            background-color: black;
+         }
+         .div2 {
+            grid-area: div2;
+           
+            height: 2px;
+            margin: 3.5rem 0;
+            background-color: black;
+         }
+      }
+
+      .foot-nav {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 1fr 2fr;
+
+         .list-one {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+
+            li {
+               padding: 0.5rem;
+               text-align: center;
+               text-transform: uppercase;
+               font-size: 0.8rem;
+               transition: all 0.4s;
+            }
+
+            a {
+               transition: all 0.4s;
+            }
+
+            a:hover, li:hover {
+               color: #db952c;
+               transform: scale(1.3);
+
+            }
+         }
+
+         .social-icons {
+            grid-column : 2 / span 1;
+            grid-row: 1 / span 2;
+            
+
+            .icons {
+               text-align: center;
+               padding: 1rem;
+
+               i {
+                  padding: 0 2.5rem;
+                  transition: 0.4s all;
+                  transform: scale(1) rotate(0);
+               }   
+
+               i:hover {
+                  color: #db952c;
+                  transform: scale(1.4) rotate(360deg);
+               }
+            }
+
+            .line-footer {
+               width: 1px;
+               height: 60px;
+               display: block;
+               margin:  0 auto;
+               background-color: black;
+               margin-top: 1.5rem;
+            }
+
+            h3 {
+               text-align: center;
+               margin: 2rem 0 ;
+               text-transform: uppercase;
+               color: #e29726;
+            }
+
+            .form-end {
+               text-align: center;
+               display: flex;
+               justify-content: center;
+               
+                
+               input {
+                  width: 70%;
+               }
+
+               button {
+                  width: 30%;
+                  font-family: 'monument_extendedregular',sans-serif;
+               }
+                  
+         
+               input::placeholder {
+                  color: black;
+                  font-family: 'monument_extendedregular',sans-serif;
+                 
+               }
+               
+
+               .btn-foot {
+                  padding: 0.9rem;
+                  border: 1px black solid;
+                  background: #fff;
+                  font-size: 0.7rem;
+                 
+               }
+
+            }
+            
+            p {
+               text-align: center;
+               margin: 5rem;
+               font-size: 0.5rem;
+            }
+         }
+
+            .list-two {
+            grid-column: 3 / span 3;
+            grid-row: 1 / span 1;
+
+            li {
+               padding: 0.5rem;
+               text-align: center;
+               text-transform: uppercase;
+               font-size: 0.8rem;
+               transition: all 0.4s;
+            }
+
+            a {
+               transition: all 0.4s;
+            }
+
+            a:hover, li:hover {
+               color: #db952c;
+               transform: scale(1.3);
+
+            }
+         }
+      }
+   }
+
+   @import 'media';
+
+
+
